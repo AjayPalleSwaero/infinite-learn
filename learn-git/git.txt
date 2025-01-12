@@ -1,0 +1,65 @@
+What is git and why is git ? 
+version control system 
+Git is primarily content-addressable filesystem with a VCS user interface written on top of it.
+
+How to check whether git got installed and which version you have it ? 
+c. git status - to see the status of various files in the current branch , status shows whetehr any files are untracked
+    or branch is upto date.  
+info: Branches are pointers to specific commit -- nothing more.  Hence branch ealy and branch often
+c. git --version 
+c. git log - shows commits detailed info
+c. git log --oneline    -shows commits reference number and message
+c. git log branch1 ..branch2 --oneline    - t checks if branch1 is "missing" any commits present in branch2
+                                            in normal workflow we never check if two local branches are uptodate since we push to remote and checks w.r.t to remote brach
+c. git add filename - to track files 
+c. git branch - to list all the branches
+c. git branch --show-current  - to see current branch
+c. git branch branchname - to create new branch
+c. git switch branchname - to move to specified branchname
+c. git commit 
+c. git branch - to create new branch 
+c. git checkout branchname 
+c. git checkout branchname; git commit   
+c. git checkout -b [newbranchname] - create and checkout to new branch
+c. git stash - temporarily saves changes to tracked files only 
+c. git stash -u temporarily saves changes to tracked files and untracked files
+c. git merge branchname -  first checkout to lagging branch using git switch branchname then merge it with ahead branch. this ensures changes
+                         commit history of lagging branch is as it is and also new changes from other branch are added by merging
+c. git rebase branchname -  first checkout to lagging branch using git switch branchname then 
+
+
+
+if git not installed how to install for windows, ubuntu and Mac
+
+
+How to configure github and 
+
+
+git clone git@github.com:AjayPalleSwaero/fastapi.git
+
+cd /path/to/your/directory
+
+git status
+
+git add .
+
+git commit -m "Your commit message"
+
+git push origin main
+
+
+
+…or create a new repository on the command line
+echo "# NREGA" >> README.md
+git init
+git add README.md
+git commit -m "first commit"
+git branch -M main
+git remote add origin git@github.com:Data-Insights-Unit/NREGA.git
+git push -u origin main
+
+
+…or push an existing repository from the command line
+git remote add origin git@github.com:Data-Insights-Unit/NREGA.git
+git branch -M main
+git push -u origin main
